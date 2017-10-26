@@ -1,0 +1,54 @@
+<ion-header>
+
+
+  <ion-navbar>
+    <!-- Header starts here -->
+<section id="header">
+  <div class="header-left">
+       <div class="logo ">
+      <a class="" routerLink="/dashboard"><img src="/assets/images/logo.jpg" alt="img"></a>
+    </div>
+    
+  </div>
+  <div class="search_area">
+    <input type="text" placeholder="Search.." name=""/>
+  </div>
+  <div class="login_Details">
+    <a class="icon_bell" routerLink="/contactus" rounterLinkActive="active"><img src="/assets/images/bell_icon.png"></a>
+      <div class="dropdown">
+          <button class="dropbtn">
+            <div *ngIf="">Profile</div></button>
+          
+          <div *ngIf="" class="dropdown-content">                
+            <a routerLink="/editpass">Edit Password</a>
+            <a routerLink="/login" (click)="logout()">Logout</a>
+          </div>
+        </div>
+  </div>
+  
+</section>
+<!-- Header ends here -->
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="breadcrumb">
+    <h4><strong>Become Part of Our Community</strong></h4>
+  </div>
+  <div id="page">
+    <div class="form-login">
+      <h3>Login</h3>
+      <form>
+          
+          <br>
+        <input class="form-input" type="text"  placeholder="Email or Phone Number ">
+        <input class="form-input" type="password"  placeholder="password">
+        <a class="blue" routerLink="/reset" >Don't remember your password?</a>
+        <div class="red">{{message}}</div>
+        <button class="button" type="submit">Submit!</button>
+      </form>
+    </div>
+  </div>
+</ion-content>

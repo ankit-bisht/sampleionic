@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle [hidden]="false">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <ion-list inert>
+
+    <ion-card class="cardstyle" *ngFor="let item of items">
+<ion-item>
+    <h2>{{item.date | date:'fullDate'}}</h2>
+    <ion-buttons end>
+              <button ion-button small color = "light" (click)="putdata(item.body, item.hours, item.bill, item.date, item.id)">
+             <ion-icon name="create"></ion-icon>
+         </button>
+    </ion-buttons>
+  </ion-item>
+      <!--<ion-card-header>
+        {{item.date | date:'fullDate'}}
+        <ion-buttons end>-->
+          <!--<button (click)="putdata(item.body, item.hours, item.bill, item.date)">
+             <ion-icon name="create"></ion-icon>
+         </button>-->
+        <!--</ion-buttons>-->
+      <!--</ion-card-header>-->
+      <ion-card-content>
+              <ion-item>
+      <ion-label style="color: black;" fixed>Hours</ion-label>
+      <ion-input type="number"  value = "{{item.hours}}" [disabled] = "true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: black;"fixed>Summary</ion-label>
+      <ion-input type="text" value = "{{item.body}}" [disabled] = "true" ></ion-input>
+    </ion-item>
+        <ion-item>
+      <ion-label  style="color: black;"fixed>Billable</ion-label>
+      <ion-toggle checked="{{item.bill}}" [disabled] = "true" >
+      </ion-toggle>
+    </ion-item>
+        <!--Hours: {{item.hours}}-->
+        <!--<br> Summary: {{item.body}}-->
+        <!--<br> Billable:-->
+        <!--<ion-toggle checked="{{item.bill}}"></ion-toggle>
+        <br>-->
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+

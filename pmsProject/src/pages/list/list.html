@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-list inert>
+<ion-card class="cardstyle" >
+<ion-card-content class="cardcontent">
+  <!--<div style="text-align : center">
+<h3>MONTH</h3>
+    <h3><ion-datetime displayFormat="MMM" [(ngModel)]="month" #date ></ion-datetime></h3>
+  </div>-->
+  
+    <button ion-item *ngFor="let item of items" (click)="itemTapped(item.title, item.note)" style = "color:red"  >
+      {{item.title}}
+    </button>
+  
+</ion-card-content>
+</ion-card>
+
+</ion-list>
+</ion-content>

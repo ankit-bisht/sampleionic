@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-buttons end>
+      <button ion-button (click)="cancel()" round>
+               <ion-icon style = "font-size:199%;" ios="ios-close-circle" md="md-close-circle"></ion-icon>     
+         </button>
+    </ion-buttons>
+    <ion-title>PmsPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <form [formGroup]='form12' #MYFORM='ngForm' (ngSubmit)='OnFormSubmit(form12.value)' name="myform">
+      <ion-item>
+        <ion-label color="primary">Hours</ion-label>
+        <ion-input placeholder="Enter hours" formControlName="hours" #hours></ion-input>
+        <span class="glyphicon glyphicon-asterisk" *ngIf="!hours.valid"></span>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="primary">Summary</ion-label>
+        <ion-input placeholder="Enter summary" formControlName="summary" #summary></ion-input>
+        <span class="glyphicon glyphicon-asterisk" *ngIf="!summary.valid"></span>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label style="text-align : left" color="primary">Billable</ion-label>
+        <ion-toggle checked="true" formControlName="billable" #billable></ion-toggle>
+      </ion-item>
+      
+      <ion-item style="text-align: center" *ngIf="!dataobj.update">
+        <ion-label>{{date | date:'fullDate'}}</ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="dataobj.update">
+        <ion-item style="text-align: center">
+          <ion-label>{{dataobj.date | date:'fullDate'}}</ion-label>
+        </ion-item>
+      </ion-item>
+      <ion-item *ngIf="dataobj.update">
+        <ion-label>Projects</ion-label>
+        <ion-select formControlName="project">
+          <ion-option *ngFor="let item of items" value="{{item.projectid}}">{{item.project}}</ion-option>
+        </ion-select>
+      </ion-item>
+<ion-item style="align-content : center" class="pmsstyle">
+      <button ion-button  type="submit" color="primary" round style ="box-shadow: 0 0 11px black;" large>Submit</button>
+</ion-item>
+    </form>
+  </ion-list>
+</ion-content>

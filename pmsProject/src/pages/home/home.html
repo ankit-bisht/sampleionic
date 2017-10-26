@@ -1,0 +1,43 @@
+<ion-content padding>
+    <ion-header>
+        <ion-navbar hideBackButton="true">
+            <ion-title>PMS</ion-title>
+        </ion-navbar>
+    </ion-header>
+    <img style="align-items: center;padding-top: 23%;" src="../assets/images/logo.png" alt="Company_.png">
+    <ion-list class="bordershow">
+        <!--Login Form on ngSubmit-->
+        <form [formGroup]='form1' #MYFORM='ngForm' (ngSubmit)='OnFormSubmit(form1)' name="myform">
+            <div class="container">
+
+                <br>
+                <ion-title>
+                    <h1>Login to PMS</h1>
+                </ion-title>
+                <!--Email Validation-->
+                <ion-item>
+                    <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                    <ion-input type="email" name="email" placeholder="Enter Email" formControlName="email"></ion-input>
+                    <span class="glyphicon glyphicon-asterisk" *ngIf="!form1.controls['email'].valid"></span>
+                </ion-item><br>
+                <!--Password Validation-->
+                <ion-item>
+                    <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+                    <ion-input type="{{type}}" placeholder="Enter Password" #password formControlName="password" name="psw"></ion-input>
+                    <ion-icon item-right name="eye" (click)="toggleShow()" [ngStyle]="{'color': color}"></ion-icon>
+                    <span class="glyphicon glyphicon-asterisk" *ngIf="!form1.controls['password'].valid"></span>
+                </ion-item>
+                <!--Login Button-->
+                <ion-item style="background-color: rgba(255, 255, 255, 0);">
+                <ion-label> Remember me</ion-label>
+                <ion-toggle color="secondary"></ion-toggle>
+                </ion-item>
+                <br> <button style="height:2.1em;" ion-button block type="submit" round>Login</button>
+            </div>
+        </form>
+    </ion-list>
+</ion-content>
+
+<!--<ion-input type="{{type}}"  #pass placeholder = "password" required></ion-input>
+     <ion-icon item-right name="eye" (click) = "toggleShow()" [ngStyle]="{'color': color}" ></ion-icon>
+  </ion-item>-->

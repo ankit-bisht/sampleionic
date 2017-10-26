@@ -1,0 +1,200 @@
+page-home {
+    @charset "utf-8";
+    /* CSS Document */
+    
+    html {
+      margin: 0;
+      height: 100%;
+    }
+    body{ font-family: 'Open Sans', sans-serif; color:#707070; font-size:16px;height: 100%;background: #f8f9fb;}
+    *{ margin:0; padding:0; box-sizing:border-box;}
+    a{ text-decoration:none;}
+    
+    /*=========================== font awesome version 4.3.0. ===========================*/
+    @font-face {
+      font-family: 'fontawesome';
+      src: url('/assets/fonts/fontawesome-webfont.eot?v=4.3.0');
+      src: url('/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+      url('/assets/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+      url('/assets/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
+      url('/assets/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+      url('/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    }
+    
+    /*=========================== HomePage Css ===========================*/
+    #page{ width: 100%;float: left;}
+    #header{ width: 100%; box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); display: inline-block; vertical-align: top; padding: 0px 30px;background: #fff;}
+    .header-left{ display: inline-block;width: auto; float: left;}
+    .header-left .logo{ float: left;margin:25px 0;}
+    .header-left .menu-icon{ float: left; border-left: 1px solid #d2d2d2; border-right: 1px solid #d2d2d2; padding: 28px 20px; margin: 0 0 0 25px;}
+    .header-left .menu-icon img{cursor:pointer;}
+    .nav-container {float: left;margin-top: 0;width: 100%; position:fixed;height: 100%;left:0;top:0;z-index: -1; max-width: 280px;}
+    .nav-container.open_left_menu{z-index: 9;}
+    .nav-link-container {}
+    .nav-menu-link {display: inline-block;position: relative;}
+    .nav-menu {float: right;background: #fafafa;list-style: none;width: 100%;height: 100%;margin: 0;padding-left: 0; font-size: 15px;-ms-transition: transform 0.4s ease;-webkit-transition: transform 0.4s ease;
+      -moz-transition: transform 0.4s ease;transition: transform 0.4s ease;-ms-transform: translateX(-100%);-webkit-transform: translateX(-100%);-moz-transform: translateX(-100%);transform: translateX(-100%);}
+    .inactive-body { background: rgba(0, 0, 0, 0.7); position: fixed;height: 100%;width: 100%;z-index: 9;}
+    .nav-active-menu-container { -ms-transform: translate(0);-webkit-transform: translate(0);-moz-transform: translate(0);transform: translate(0);}
+    .nav-menu li {padding-left: 20px;height: 40px;border-bottom: 2px solid #f2f2f2;}
+    .nav-menu li a { text-decoration: none;line-height: 40px;color: #b3b3b3;}
+    .nav-menu li a:hover { color: #4682B4; }
+    .nav-close-menu-li {background: #4682B4;display: block;}
+    .nav-close-menu-li a { color: white !important; }
+    .search_area{width: 45%;float: left;}
+    .search_area input[type="text"]{    font-size: 14px; color: #3e3e3e;border: none;height: 34px;margin: 22px 0 0 0;padding: 10px;width: 100%;}
+    .login_Details{width:auto;float: right;padding: 26px 0 0 0;position: relative;}
+    .login_Details .icon_bell{display: inline-block;    vertical-align: top;}
+    .user_login{display: inline-block;}
+    .user_login   span{vertical-align: top;margin: 5px 0 0 0;display: inline-block;}
+    .user_login  a{font-size: 14px;color:#3e3e3e;display: inline-block;    vertical-align: top;}
+    .user_login a img{margin:0 15px 0px 15px;width: 29px;height: 30px;border-radius: 100%;}
+    .user_login a i{font-size: 19px;margin: 1px 0 0px 4px;vertical-align: top;}
+    .sub_menu{width: 170px;right:0;position:absolute;float: left;background:#f1f1f1;    border-radius: 3px;padding: 10px 10px 3px 10px;display: none;}
+    .sub_menu ul li{display: block;list-style: none;}
+    .sub_menu ul li a{display: block;font-size: 14px;color: #3e3e3e;margin: 0 0 6px 0;}
+    .paginnation_div{width: 100%;float: left;padding:19px 0 19px 28px;}
+    .paginnation_div ul li a{font-size: 14px;color: #9b9b9b;display: inline-block;}
+    .paginnation_div ul li a:hover{color: #3454ba;}
+    .paginnation_div ul li a> img{vertical-align: top;margin: 0 17px 0 0;}
+    .paginnation_div ul li.active{list-style: none;}
+    .paginnation_div ul li{display: inline-block;padding: 0 24px 0px 0;}
+    .paginnation_div ul li.active a{font-weight: bold;}
+    .middle_content{width: 100%;float: left;padding:0px; margin: 0 0 60px 0;}
+    .main_content{width:81%;float: left;  margin: 0 0 60px 0;}
+    .right_panel{width: 17%;float: right;padding-right: 22px;}
+    .chart_container{width: 100%;float: left;}
+    .char_pie{width: 48%;float: left;background: #fff;padding: 14px;border-right: 1px solid #dddedf;border-bottom: 1px solid #dddedf;margin-right: 4%;}
+    .char_pie img{padding: 0 0 1px 0;width: 100%;height: 176px;}
+    .chart_container h2{font-size: 14px;color: #3e3e3e;position: relative;font-weight: normal;padding: 0 0 7px 0;}
+    .chart_container h2:after{content: "";background: #ccc;width: 86%;height: 1px;position: absolute;right: 0;    top: 11px;}
+    .divices_info{width: 48%;float: left;background: #fff;padding: 14px 14px 25px 14px;border-right: 1px solid #dddedf;border-bottom: 1px solid #dddedf}
+    .divices_info h2:after{width: 67%;}
+    .connect_icon{width: 48%;float:left;text-align: center;margin: 42px 0 0 0;}
+    .divices_list{width: 44%;float: left;}
+    .device_found{width: 100%;float: left;background-image: url('/assets/images/phone_img.png');background-repeat: no-repeat;padding: 0 0 0 30px;}
+    .device_found.android_device{background-image: url('/assets/images/android.png');}
+    .device_found span{font-size: 12px;color: #3e3e3e;display: block;}
+    .device_found .device_name{font-weight: bold;color: #5f5f5f;font-size: 14px;}
+    .device_found i{color: #3454ba;font-size: 34px;}
+    .device_found a{position: absolute;right: 6px;margin: auto;top: 15px;}
+    .list_repeat{width:100%;float: left;position: relative;border:2px solid #d8d8d8;padding:16px 11px 16px 11px;margin: 13px 0 0 0;}
+    .upload_div{width: 100%;float: left;background: #f5f5f5;border:2px dashed #d4d4d4;margin: 28px 0;}
+    .upload_div img{width: 100%;}
+    .recent_upload{width: 100%;float: left;background: #fff;border-right: 1px solid #dddedf;border-bottom: 1px solid #dddedf;padding: 10px;}
+    .recent_upload h2{font-size: 14px;color: #3e3e3e;position: relative;font-weight: normal;padding: 0 0 7px 0;}
+    .recent_upload h2:after{content: "";background: #ccc;width: 86%;height: 1px;position: absolute;right: 0;    top: 11px;}
+    .recent_list{width: 100%;float: left;padding:27px 40px 10px 40px;}
+    .recent_list table{width: 100%;table-layout: fixed;}
+    .recent_list table tr td {text-align: center;border-bottom: 1px solid #e4e4e5;padding: 13px 0 13px 0;}
+    .recent_list table tr td:first-child{text-align: left;}
+    .recent_list table tr:last-child td{border-bottom: none;}
+    .song_type{width:auto;display:inline-block;background-image: url(/assets/images/mp4_icon.png);background-repeat: no-repeat;padding: 0 0 0 44px;text-align: left;}
+    .song_type.img_file{background-image: url(/assets/images/jpg_file.png);}
+    .song_type.doc_file{background-image: url(/assets/images/doc_file.png);}
+    .song_type.folder_file{background-image: url(/assets/images/folder_file.png);}
+    .song_type .song_name{color: #3e3e3e;font-size: 14px;display: block;}
+    .song_type .file_type{font-size: 12px;font-style: italic;display: block;color: #3e3e3e;}
+    .song_size span{font-size: 12px;font-style: italic;display: block;color: #3e3e3e;}
+    .song_size{width: 100%;float: left;}
+    .date_upload{width: auto;display: inline-block;text-align: left;}
+    .date_upload .date_time{font-size: 13px;color: #3e3e3e;}
+    .date_upload .phone_name{font-size: 12px;font-style: italic;display: block;color: #3e3e3e;}
+    .load_more{width: 100%;float: left;background: #f1f1f1;text-align: center;margin: 26px 0 0 0px;padding: 14px 0;border-bottom: 1px solid #dddedf;border-right: 1px solid #dddedf;}
+    .load_more a{font-size: 14px;color: #3e3e3e;display: inline-block;}
+    .footer_container{width:100%; position: fixed; bottom: 0;float: left;background: #3e3e3e;text-align: center;padding: 16px 0;margin: 48px 0 0 0;}
+    .footer_container p{font-size: 13px;color: #b1b1b1;}
+    .red{ font-size: 12px;
+        float: right;
+        color: #ff0000;
+        margin: 0 0 8px 0;}
+    .blue{
+        font-size: 12px;
+        float: left;
+        color: #000000 ;
+        margin: 0 0 8px 0;
+    }
+        .sidebar {
+        float: right;
+        width: 100%;
+        margin: 0;
+    }
+    .sidebar h4 {
+        font-size: 15px;
+    
+    
+        color: #3454ba;
+        text-align: center;
+    }
+    .sidebar .upload {
+        width: 100%;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+        background: #fff;
+        float: left;
+        padding: 16px;
+        margin: 25px 0px 0 0;
+    }
+    
+    .sidebar .upload ul {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #e4e4e5;
+        padding: 0px 0 10px 0;
+        margin: 0 0 10px 0;
+    }
+    .sidebar .upload ul li {
+        font-size: 14px;
+        float: left;
+        list-style: none;
+        width: 65%;
+        margin: 0 16px 0 0;
+    }
+    .sidebar .upload ul li img {
+        float: left;
+        margin: 0 15px 0 0;
+    }
+    .sidebar .upload ul li strong {
+        display: block;
+    }
+    .sidebar .upload ul li small {
+        font-size: 12px;
+        font-style: italic;
+        display: block;
+    }
+    
+    .sidebar .upload ul li+li {
+        width: 28%;
+        margin: 0;
+        padding: 23px 0 0 0;
+    }
+    
+    
+    /*=========================== Login page Css ===========================*/
+    .form-box{ max-width:500px; margin: 25px auto;}
+    .form-login{ max-width:500px; margin: 25px auto;}
+    .form-login h3{ text-align: center; font-size: 20px; font-weight: normal; color: #000000; border-bottom: 2px solid #cccccc; margin: 0 0 20px 0; padding: 0 0 12px 0;}
+    .form-input{ color: #000; background: #cccccc; padding: 8px; border-top: 1px solid #787878; border-bottom:none; border-right: none; border-left: none; width: 100%; margin: 0 0 12px 0;}
+    .button{ width: 100%; background: #000000; padding: 10px 40px; color: #fff; color: #fff; border-radius: 15px; font-size: 15px; cursor: pointer; border: none;}
+    textarea{ color:#000; background: #cccccc; padding: 8px; border-top: 1px solid #787878; border-bottom:none; border-right: none; border-left: none; width: 100%; margin: 0 0 12px 0; height: 150px;}
+    label{ font-size: 14px; color: #000; margin: 0 0 5px 0; float: left;}
+    
+    /*=========================== Contact page Css ===========================*/
+    .breadcrumb{ width: 100%; background: #edeeee; padding: 25px 20px;}
+    .breadcrumb h3{ color: #000; font-weight: normal; font-size: 24px;}
+    .contact-form{ padding: 0 20px;}
+    .contact-left{ float: left; width: 65%; border-right: 1px solid #cccccc; padding: 0 35px 0 0;}
+    .contact-left h4{ font-weight: normal; font-size: 16px; color: #000; margin: 10px 0 15px 0;}
+    .contact-left .button{ background: #0033ff; float: left; width: auto; padding:10px 45px;}
+    .contact-right{ float: right; width:30%; font-size: 16px; color: #000;}
+    .contact-right .address-box{ padding: 65px 0 0 0;}
+    
+    
+    
+    
+    
+    @media all and (min-width:1260px) and (max-width:1400px) {
+    .middle_content{ margin: 0 0 60px 0;}
+    .main_content { width: 72%;}
+    .right_panel { width: 26%;}
+    }
+}
